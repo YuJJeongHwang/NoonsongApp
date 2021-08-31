@@ -6,7 +6,7 @@
     <meta-data android:name="unity.splash-mode" android:value="0" />
     <meta-data android:name="unity.splash-enable" android:value="True" />
     <meta-data android:name="notch.config" android:value="portrait|landscape" />
-    <meta-data android:name="unity.build-id" android:value="40d357c7-9217-4b7f-a5ed-17aedee816bf" />
+    <meta-data android:name="unity.build-id" android:value="3935c377-2488-4307-9ab4-127fda4ea649" />
     <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
     <meta-data android:name="com.google.ar.core" android:value="required" />
   </application>
@@ -17,4 +17,5 @@
   <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+  <uses-feature android:name="com.google.ar.core.depth" android:required="true" />
 </manifest>

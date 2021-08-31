@@ -3,10 +3,11 @@ import 'package:unity_noonsong/unityScreen.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: 'Named Routes Demo',
     initialRoute: '/',
     routes: {
-      '/': (context) => WithARkitScreen(),
+      '/': (context) => UnityScreen(),
     }
   ));
 }

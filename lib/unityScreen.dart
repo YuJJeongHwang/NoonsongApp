@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
 
-class WithARkitScreen extends StatefulWidget {
+class UnityScreen extends StatefulWidget {
   @override
-  _WithARkitScreenState createState() => _WithARkitScreenState();
+  _UnityScreenState createState() => _UnityScreenState();
 }
 
 class CustomPopupMenu {
@@ -16,13 +16,15 @@ class CustomPopupMenu {
 
 List<CustomPopupMenu> choices = <CustomPopupMenu>[
   CustomPopupMenu(title: 'AR Noonsong', scene: 0),
+  CustomPopupMenu(title: 'Noonsong Face', scene: 1),
 ];
 
-class _WithARkitScreenState extends State<WithARkitScreen> {
+class _UnityScreenState extends State<UnityScreen> {
 
   static final GlobalKey<ScaffoldState> _scaffoldKey =
   GlobalKey<ScaffoldState>();
   UnityWidgetController _unityWidgetController;
+
 
   CustomPopupMenu _selectedChoices = choices[0];
 
@@ -51,6 +53,7 @@ class _WithARkitScreenState extends State<WithARkitScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('ARKIT Demo'),
+        backgroundColor: Colors.white,
         actions: <Widget>[
           PopupMenuButton<CustomPopupMenu>(
             elevation: 3.2,
