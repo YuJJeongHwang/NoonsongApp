@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "737877537466",
+    "project_id": "noonsong-fa702",
+    "storage_bucket": "noonsong-fa702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737877537466:android:0ba3a977a8742e4ea48883",
+        "android_client_info": {
+          "package_name": "com.example.unity_noonsong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737877537466-f9rb20id6fa25r7pc4ftplnaj5mj9c4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXEjPyTI5YuTeuOKlzQ9FnuOJwrwf_xQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737877537466-f9rb20id6fa25r7pc4ftplnaj5mj9c4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
