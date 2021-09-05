@@ -264,14 +264,6 @@ class _SignUpPageState extends State<SignUpPage> {
                             onPrimary: Colors.black,
                           ),
                           child: Text('')))),
-              Container(
-                alignment: Alignment.center,
-                child: Text(_success == null
-                    ? ''
-                    : (_success
-                        ? 'Successfully registered $_userEmail'
-                        : 'Registration failed')),
-              )
             ],
           ),
         ),
