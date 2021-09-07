@@ -61,9 +61,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(
                   '이름',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
+                  style:
+                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
                 ),
               ),
               Container(
@@ -89,9 +88,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(
                   '이메일',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
+                  style:
+                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
                 ),
               ),
               Container(
@@ -177,9 +175,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(
                   '비밀번호',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
+                  style:
+                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
                 ),
               ),
               Container(
@@ -205,9 +202,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(
                   '비밀번호 확인',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
+                  style:
+                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
                 ),
               ),
               Container(
