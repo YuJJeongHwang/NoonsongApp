@@ -9,7 +9,6 @@ import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:screenshot/screenshot.dart';
 
-
 class UnityScreen extends StatefulWidget {
   @override
   _UnityScreenState createState() => _UnityScreenState();
@@ -46,189 +45,187 @@ class _UnityScreenState extends State<UnityScreen> {
   Widget build(BuildContext context) {
     double widgetHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
         backgroundColor: Colors.white,
-        elevation: 0.0,
-        leading: IconButton(
-          padding: EdgeInsets.only(top: 5, left: 10),
-          color: Color.fromRGBO(13, 45, 132, 1),
-          icon: Icon(Icons.arrow_back_ios, size: 40),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+            padding: EdgeInsets.only(top: 5, left: 10),
+            color: Color.fromRGBO(13, 45, 132, 1),
+            icon: Icon(Icons.arrow_back_ios, size: 40),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
-      ),
-      body: Column(
-        children: <Widget>[
-          Screenshot(
-            controller : screenshotController,
-            key: globalKey,
-            child: Container(
-              color: Colors.white,
-              padding: EdgeInsets.only(top:8, bottom: 8),
-              child: SizedBox(
-                height: widgetHeight - 100,
-                child: Container(
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        child: UnityWidget(
-                          onUnityCreated: onUnityCreated,
+        body: Column(
+          children: <Widget>[
+            Screenshot(
+              controller: screenshotController,
+              key: globalKey,
+              child: Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(top: 8, bottom: 8),
+                child: SizedBox(
+                  height: widgetHeight - 260,
+                  child: Container(
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          child: UnityWidget(
+                            onUnityCreated: onUnityCreated,
                             //isARScene: false,
                             //onUnityMessage: onUnityMessage,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(8),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children:[
-                  ElevatedButton(
-                    onPressed: () {
-                      int scene = 0;
-                      _unityWidgetController.postMessage(
-                           'GameManager',
-                           'LoadGameScene',
-                           scene.toString(),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      primary: Colors.white,
+            Container(
+              padding: EdgeInsets.all(8),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        int scene = 0;
+                        _unityWidgetController.postMessage(
+                          'GameManager',
+                          'LoadGameScene',
+                          scene.toString(),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        primary: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/snowar.png',
+                        width: 70,
+                        height: 70,
+                      ),
                     ),
-                    child: Image.asset(
-                      'images/snowar.png',
-                      width: 70,
-                      height: 70,
+                    ElevatedButton(
+                      onPressed: () {
+                        int scene = 1;
+                        _unityWidgetController.postMessage(
+                          'GameManager',
+                          'LoadGameScene',
+                          scene.toString(),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        primary: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/bluesnowar.png',
+                        width: 70,
+                        height: 70,
+                      ),
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      int scene = 1;
-                      _unityWidgetController.postMessage(
-                        'GameManager',
-                        'LoadGameScene',
-                        scene.toString(),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      primary: Colors.white,
+                    ElevatedButton(
+                      onPressed: () {
+                        int scene = 2;
+                        _unityWidgetController.postMessage(
+                          'GameManager',
+                          'LoadGameScene',
+                          scene.toString(),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        primary: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/레이어 2.png',
+                        width: 70,
+                        height: 70,
+                      ),
                     ),
-                    child: Image.asset(
-                      'images/bluesnowar.png',
-                      width: 70,
-                      height: 70,
+                    ElevatedButton(
+                      onPressed: () {
+                        int scene = 3;
+                        _unityWidgetController.postMessage(
+                          'GameManager',
+                          'LoadGameScene',
+                          scene.toString(),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        primary: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/greennoonsong.png',
+                        width: 70,
+                        height: 70,
+                      ),
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      int scene = 2;
-                      _unityWidgetController.postMessage(
-                           'GameManager',
-                           'LoadGameScene',
-                           scene.toString(),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      primary: Colors.white,
+                    ElevatedButton(
+                      onPressed: () {
+                        int scene = 4;
+                        _unityWidgetController.postMessage(
+                          'GameManager',
+                          'LoadGameScene',
+                          scene.toString(),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        primary: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/character_new40.png',
+                        width: 70,
+                        height: 70,
+                      ),
                     ),
-                    child: Image.asset(
-                      'images/레이어 2.png',
-                      width: 70,
-                      height: 70,
+                    ElevatedButton(
+                      onPressed: () {
+                        int scene = 5;
+                        _unityWidgetController.postMessage(
+                          'GameManager',
+                          'LoadGameScene',
+                          scene.toString(),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        primary: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/noonsonghairband.png',
+                        width: 70,
+                        height: 70,
+                      ),
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      int scene = 3;
-                      _unityWidgetController.postMessage(
-                        'GameManager',
-                        'LoadGameScene',
-                        scene.toString(),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      primary: Colors.white,
-                    ),
-                    child: Image.asset(
-                      'images/greennoonsong.png',
-                      width: 70,
-                      height: 70,
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      int scene = 4;
-                      _unityWidgetController.postMessage(
-                        'GameManager',
-                        'LoadGameScene',
-                        scene.toString(),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      primary: Colors.white,
-                    ),
-                    child: Image.asset(
-                      'images/character_new40.png',
-                      width: 70,
-                      height: 70,
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      int scene = 5;
-                      _unityWidgetController.postMessage(
-                        'GameManager',
-                        'LoadGameScene',
-                        scene.toString(),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      primary: Colors.white,
-                    ),
-                    child: Image.asset(
-                      'images/noonsonghairband.png',
-                      width: 70,
-                      height: 70,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          IconButton(
-            icon: Icon(Icons.panorama_fish_eye, size: 40),
-            onPressed: () async {
-              //final image = await screenshotController.capture();
-              screenshotController
-                  .capture(delay: Duration(milliseconds: 10))
-                  .then((capturedImage) async {
-                ShowCapturedWidget(context, capturedImage);
-              }).catchError((onError) {
-                print(onError);
-              });
-              //if (image == null) return;
-              //await saveImage(image);
-            },
-            //icon: Icons.panorama_fish_eye,
-
-          ),
-        ],
-      )
-    );
+            IconButton(
+              icon: Icon(Icons.panorama_fish_eye, size: 40),
+              onPressed: () async {
+                //final image = await screenshotController.capture();
+                screenshotController
+                    .capture(delay: Duration(milliseconds: 10))
+                    .then((capturedImage) async {
+                  ShowCapturedWidget(context, capturedImage);
+                }).catchError((onError) {
+                  print(onError);
+                });
+                //if (image == null) return;
+                //await saveImage(image);
+              },
+              //icon: Icons.panorama_fish_eye,
+            ),
+          ],
+        ));
   }
 
   void onUnityMessage(controller, message) {
@@ -242,7 +239,6 @@ class _UnityScreenState extends State<UnityScreen> {
 
   Future<dynamic> ShowCapturedWidget(
       BuildContext context, Uint8List capturedImage) {
-
     return showDialog(
       useSafeArea: false,
       context: context,
@@ -295,13 +291,12 @@ class _UnityScreenState extends State<UnityScreen> {
     await [Permission.storage].request();
 
     final time = DateTime.now()
-      .toIso8601String()
-      .replaceAll('.', '-')
-      .replaceAll(':', '-');
+        .toIso8601String()
+        .replaceAll('.', '-')
+        .replaceAll(':', '-');
     final name = 'screenshot_$time';
     final result = await ImageGallerySaver.saveImage(bytes, name: name);
 
     return result['filePath'];
   }
 }
-
