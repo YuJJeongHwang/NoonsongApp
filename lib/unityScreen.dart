@@ -75,25 +75,6 @@ class _UnityScreenState extends State<UnityScreen> {
             Navigator.pop(context);
           },
         ),
-        /*actions: <Widget>[
-          PopupMenuButton<CustomPopupMenu>(
-            elevation: 0.0,
-            initialValue: choices[0],
-            onCanceled: () {
-              print('You have not chossed anything');
-            },
-            tooltip: 'This is tooltip',
-            onSelected: _select,
-            itemBuilder: (BuildContext context) {
-              return choices.map((CustomPopupMenu choice) {
-                return PopupMenuItem<CustomPopupMenu>(
-                  value: choice,
-                  child: Text(choice.title),
-                );
-              }).toList();
-            },
-          ),
-        ],*/
       ),
       body: Column(
         children: <Widget>[
@@ -106,26 +87,17 @@ class _UnityScreenState extends State<UnityScreen> {
               child: SizedBox(
                 height: 400,
                 child: Container(
-                  //padding: EdgeInsets.only(top: 8, bottom: 8),
-                  /*: Card(
-                    color: Colors.white,
-                    elevation: 3.0,
-                    margin: const EdgeInsets.all(8),
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),*/
                   child: Stack(
                     children: <Widget>[
                       Container(
-                          color: Colors.red,
-                        ),
-                        /*child: UnityWidget(
+                          //color: Colors.red,
+                        //),
+                        child: UnityWidget(
                           onUnityCreated: onUnityCreated,
                             //isARScene: false,
                             //onUnityMessage: onUnityMessage,
                         ),
-                      ),*/
+                      ),
                     ],
                   ),
                 ),
@@ -159,12 +131,12 @@ class _UnityScreenState extends State<UnityScreen> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      /*int scene = 1;
+                      int scene = 1;
                       _unityWidgetController.postMessage(
                            'GameManager',
                            'LoadGameScene',
                            scene.toString(),
-                      );*/
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 0.0,
