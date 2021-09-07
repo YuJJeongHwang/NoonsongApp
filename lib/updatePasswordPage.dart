@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'signInPage.dart';
+
+import 'userInfoPage.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
-class SignUpPage extends StatefulWidget {
+class UpdatePasswordPage extends StatefulWidget {
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _UpdatePasswordPageState createState() => _UpdatePasswordPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
-  bool _success;
-  String _userEmail = '';
+  final TextEditingController _newpasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +44,7 @@ class _SignUpPageState extends State<SignUpPage> {
               Container(
                 padding: EdgeInsets.only(top: 60, left: 15),
                 child: Text(
-                  '회원가입',
+                  '비밀번호 변경',
                   style: TextStyle(
                     fontSize: 30,
                     fontFamily: 'Cafe24Ssurround',
@@ -58,121 +55,7 @@ class _SignUpPageState extends State<SignUpPage> {
               Container(
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(
-                  '이름',
-                  style:
-                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: SizedBox(
-                  height: 45,
-                  child: TextFormField(
-                    controller: _nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      //labelText: '이름',
-                    ),
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return "이름을 입력해주세요";
-                      }
-                      return null;
-                    },
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(top: 10, left: 20),
-                child: Text(
-                  '이메일',
-                  style:
-                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: SizedBox(
-                  height: 45,
-                  child: TextFormField(
-                    controller: _emailController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                    ),
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return "이메일을 입력해주세요";
-                      }
-                      return null;
-                    },
-                  ),
-                ),
-              ),
-              /*Container(
-              padding: EdgeInsets.only(left: 20),
-              child: SizedBox(
-                height: 45,
-                child: ElevatedButton(
-                  onPressed: () {  },
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0.0,
-                    primary: Colors.black12,
-                    onPrimary: Colors.black,
-                  ),
-                  child: Text(
-                    '인증코드 보내기',
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 10, left: 20),
-              child: Text(
-                '이메일 인증코드',
-                style: TextStyle(
-                  fontSize: 17,
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                children: [
-                  Container(
-                    child: SizedBox(
-                      width: 250,
-                      height: 45,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: SizedBox(
-                      width: 120,
-                      height: 45,
-                      child: ElevatedButton(
-                        onPressed: () {  },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          primary: Colors.black12,
-                          onPrimary: Colors.black,
-                        ),
-                        child: Text(
-                          '인증코드 확인',
-                        ),
-                      ),
-                    )
-                  ),
-                ],
-              ),
-            ),*/
-              Container(
-                padding: EdgeInsets.only(top: 10, left: 20),
-                child: Text(
-                  '비밀번호',
+                  '변경 전 비밀번호',
                   style:
                       TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
                 ),
@@ -199,7 +82,34 @@ class _SignUpPageState extends State<SignUpPage> {
               Container(
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(
-                  '비밀번호 확인',
+                  '새 비밀번호',
+                  style:
+                      TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: SizedBox(
+                  height: 45,
+                  child: TextFormField(
+                    controller: _newpasswordController,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                    validator: (String value) {
+                      if (value.isEmpty) {
+                        return "비밀번호를 입력해주세요";
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 10, left: 20),
+                child: Text(
+                  '새 비밀번호 확인',
                   style:
                       TextStyle(fontSize: 17, fontFamily: 'Cafe24SsurroundAir'),
                 ),
@@ -214,8 +124,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       border: OutlineInputBorder(),
                     ),
                     validator: (String value) {
-                      if (value != _passwordController.text) {
-                        return '비밀번호를 다시 입력해주세요';
+                      if (value != _newpasswordController.text) {
+                        return '비밀번호가 일치하지 않습니다.';
                       }
                       return null;
                     },
@@ -230,7 +140,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: ElevatedButton(
                       onPressed: () async {
                         if (_formKey.currentState.validate()) {
-                          await _register();
+                          await _changePassword(_passwordController.text,
+                              _newpasswordController.text);
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -239,7 +150,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         onPrimary: Colors.white,
                       ),
                       child: Text(
-                        '회원가입',
+                        '비밀번호 변경하기',
                         style: TextStyle(
                             fontSize: 20, fontFamily: 'Cafe24Ssurround'),
                       )),
@@ -268,26 +179,25 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   void dispose() {
     // Clean up the controller when the Widget is disposed
-    _emailController.dispose();
     _passwordController.dispose();
+    _newpasswordController.dispose();
     super.dispose();
   }
 
-  Future<void> _register() async {
-    final User user = (await _auth.createUserWithEmailAndPassword(
-      email: _emailController.text,
-      password: _passwordController.text,
-    ))
-        .user;
-    if (user != null) {
-      setState(() {
-        _success = true;
-        _userEmail = user.email;
+  Future<void> _changePassword(
+      String currentPassword, String newPassword) async {
+    final User user = FirebaseAuth.instance.currentUser;
+    final cred = EmailAuthProvider.credential(
+        email: user.email, password: currentPassword);
+
+    user.reauthenticateWithCredential(cred).then((value) {
+      user.updatePassword(newPassword).then((_) {
+        //Success, do something
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SignInPage()));
+            context, MaterialPageRoute(builder: (context) => UserInfoPage()));
+      }).catchError((error) {
+        //Error, show something
       });
-    } else {
-      _success = false;
-    }
+    }).catchError((err) {});
   }
 }

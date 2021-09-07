@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:unity_noonsong/menuScreen.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -104,14 +105,10 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  void _logIn(String text, String text2) {
-    User user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      print("Login Sucessfull");
-
-      Navigator.pushNamed(context, '/m');
-    } else {
-      print("Login Failed");
-    }
+  Future<void> _logIn(String text, String text2) async {
+    UserCredential userCredential = await FirebaseAuth.instance
+        .signInWithEmailAndPassword(email: text, password: text2);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MenuScreen()));
   }
 }
