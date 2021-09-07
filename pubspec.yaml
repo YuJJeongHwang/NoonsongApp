@@ -47,8 +47,10 @@ dependencies:
   firebase_core: ^1.6.0
   
   #android intent
-  android_intent: ^2.0.2
   device_apps:
+
+  #sticker
+  image_picker: ^0.8.0
 
 dev_dependencies:
   flutter_test:

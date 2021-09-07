@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:unity_noonsong/signInPage.dart';
 import 'package:unity_noonsong/signUpPage.dart';
 import 'package:unity_noonsong/splashScreen.dart';
+import 'package:unity_noonsong/stickerPage.dart';
 import 'package:unity_noonsong/unityScreen.dart';
 import 'package:unity_noonsong/userInfoPage.dart';
 import 'package:unity_noonsong/updatePasswordPage.dart';
@@ -28,5 +29,6 @@ Future<void> main() async {
         '/us': (context) => UnityScreen(),
         '/ui': (context) => UserInfoPage(),
         '/p': (context) => UpdatePasswordPage(),
+        '/st': (context) => StickerPage(),
       }));
 }
