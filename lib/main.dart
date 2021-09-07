@@ -3,6 +3,7 @@ import 'package:unity_noonsong/signInPage.dart';
 import 'package:unity_noonsong/signUpPage.dart';
 import 'package:unity_noonsong/splashScreen.dart';
 import 'package:unity_noonsong/unityScreen.dart';
+import 'package:unity_noonsong/userInfoPage.dart';
 
 import 'homeScreen.dart';
 import 'menuScreen.dart';
@@ -19,6 +20,7 @@ void main() {
       '/i': (context) => SignInPage(),
       '/m': (context) => MenuScreen(),
       '/us': (context) => UnityScreen(),
+      '/ui': (context) => UserInfoPage(),
     }
   ));
 }

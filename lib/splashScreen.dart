@@ -19,7 +19,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
         style: TextStyle(
           fontSize: 45,
           color: Color.fromRGBO(13, 45, 132, 1),
-          fontFamily: "WandocleanseaB",
+          fontFamily: "Cafe24Ssurround",
         ),
       ),
       image: Image.asset("images/character_new30.png"),
