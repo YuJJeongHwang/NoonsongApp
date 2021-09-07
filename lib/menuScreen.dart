@@ -15,7 +15,6 @@ class MenuScreen extends StatelessWidget {
       key: _scaffoldKey,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        //iconTheme: new IconThemeData(size: 40, color: Colors.indigo[900],),
         backgroundColor: Colors.white,
         elevation: 0.0,
         leading: IconButton(

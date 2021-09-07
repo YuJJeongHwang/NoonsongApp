@@ -51,6 +51,9 @@ dependencies:
 
   #sticker
   image_picker: ^0.8.0
+  stick_it: ^1.0.0+2
+  extended_image: ^4.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -68,9 +71,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/눈송이ar.PNG
     - images/레이어 2.png
     - images/
+    - assets/
 
   fonts:
      - family: WandocleanseaB
