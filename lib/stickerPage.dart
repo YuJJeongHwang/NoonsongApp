@@ -8,16 +8,13 @@ import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'dart:typed_data';
 
-class AdvancedExample extends StatefulWidget {
-  //AdvancedExample({Key? key}) : super(key: key);
-  static String routeName = 'advanced-example';
-  static String routeTitle = 'Advanced Example';
+class StickerPage extends StatefulWidget {
 
   @override
-  _AdvancedExampleState createState() => _AdvancedExampleState();
+  _StickerPageState createState() => _StickerPageState();
 }
 
-class _AdvancedExampleState extends State<AdvancedExample> {
+class _StickerPageState extends State<StickerPage> {
   /// background image of the stick it class
   final String _background =
       'https://blogfiles.pstatic.net/MjAyMTA5MDhfMjIy/MDAxNjMxMDMxOTQzNjkw.Bl2g4eBBOM7s3bPKs_rJWHkHoWdfDS1pGd1QepgzO1Ug.1f1DP8HqOQTQEVKyhl8ajpSJtF_gEEhD9i7rkKqLQhog.JPEG.ksyy0704/IMG_3508.JPG';
@@ -39,6 +36,9 @@ class _AdvancedExampleState extends State<AdvancedExample> {
     _stickIt = StickIt(
       child: _image == null ? Image.network(_background) : Image.file(_image, fit: BoxFit.cover),
       stickerList: [
+        Image.asset("assets/sym01_l.gif"),
+        Image.asset("assets/calligraphy_01.gif"),
+        Image.asset("assets/calligraphy_02.gif"),
         Image.asset("assets/character_new01.gif"),
         Image.asset("assets/character_new02.gif"),
         Image.asset("assets/character_new03.gif"),

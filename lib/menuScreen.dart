@@ -7,8 +7,7 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    double midHeight = MediaQuery.of(context).size.height/2;
-    double midWidth = MediaQuery.of(context).size.width/2;
+    double widgetHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       key: _scaffoldKey,
@@ -132,110 +131,73 @@ class MenuScreen extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(width: double.infinity),
           Container(
-              padding: EdgeInsets.only(left: midWidth - 160, top: 100),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(right: 10),
-                    color:Colors.white,
-                    child: SizedBox(
-                        width: 150,
-                        height: 150,
-                        child: OutlinedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/us');
-                          },
-                          style: OutlinedButton.styleFrom(
-                            side: BorderSide(
-                              width: 5.0,
-                              color: Color.fromRGBO(13, 45, 132, 1),
-                            ),
-                          ),
-                          child: Image.asset(
-                            'images/character_new02.png',
-                          ),
-                        ),
-                    ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 10),
-                  color:Colors.white,
-                  child: SizedBox(
-                    width: 150,
-                    height: 150,
-                    child: OutlinedButton(
-                      onPressed: () {
-                        //Navigator.pushNamed(context, '/us');
-                      },
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(
-                          width: 5.0,
-                          color: Color.fromRGBO(13, 45, 132, 1),
-                        ),
-                      ),
-                      child: Image.asset(
-                        'images/character_new40.png',
-                      ),
+              color:Colors.white,
+              child: SizedBox(
+                width: 150,
+                height: 150,
+                child: OutlinedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/us');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                      width: 5.0,
+                      color: Color.fromRGBO(13, 45, 132, 1),
                     ),
                   ),
+                  child: Image.asset(
+                    'images/character_new02.png',
+                  ),
                 ),
-              ],
-            )
+              ),
           ),
           Container(
-              padding: EdgeInsets.only(left: midWidth - 160, top: 30),
-            child: Row(
-              children: [
-                Container(
-                    padding: EdgeInsets.only(right: 10),
-                    color:Colors.white,
-                    child: SizedBox(
-                        width: 150,
-                        height: 150,
-                        child: OutlinedButton(
-                          onPressed: () {
-                            _noonsongGameStart();
-                          },
-                          style: OutlinedButton.styleFrom(
-                            side: BorderSide(
-                              width: 5.0,
-                              color: Color.fromRGBO(13, 45, 132, 1),
-                            ),
-                          ),
-                          child: Image.asset(
-                            'images/character_new12.png',
-                          ),
-                        )
-                    )
-                ),
-                Container(
-                    padding: EdgeInsets.only(left: 10),
-                    color:Colors.white,
-                    child: SizedBox(
-                        width: 150,
-                        height: 150,
-                        child: OutlinedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/st');
-                          },
-                          style: OutlinedButton.styleFrom(
-                            side: BorderSide(
-                              width: 5.0,
-                              color: Color.fromRGBO(13, 45, 132, 1),
-                            ),
-                          ),
-                          child: Image.asset(
-                            'images/character_new12.png',
-                          ),
-                        )
-                    )
-                ),
-              ],
-            ),
+              padding: EdgeInsets.only(top: 20),
+              color:Colors.white,
+              child: SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: OutlinedButton(
+                    onPressed: () {
+                      _noonsongGameStart();
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        width: 5.0,
+                        color: Color.fromRGBO(13, 45, 132, 1),
+                      ),
+                    ),
+                    child: Image.asset(
+                      'images/character_new12.png',
+                    ),
+                  )
+              )
+          ),
+          Container(
+              padding: EdgeInsets.only(top: 20),
+              color:Colors.white,
+              child: SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/st');
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        width: 5.0,
+                        color: Color.fromRGBO(13, 45, 132, 1),
+                      ),
+                    ),
+                    child: Image.asset(
+                      'assets/calligraphy_01.gif',
+                    ),
+                  )
+              )
           ),
         ],
       ),
