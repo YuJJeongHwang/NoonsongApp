@@ -192,7 +192,7 @@ class MenuScreen extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                    //padding: EdgeInsets.only(left: midWidth - 165, top: 20),
+                    padding: EdgeInsets.only(right: 10),
                     color:Colors.white,
                     child: SizedBox(
                         width: 150,
@@ -212,7 +212,29 @@ class MenuScreen extends StatelessWidget {
                           ),
                         )
                     )
-                )
+                ),
+                Container(
+                    padding: EdgeInsets.only(left: 10),
+                    color:Colors.white,
+                    child: SizedBox(
+                        width: 150,
+                        height: 150,
+                        child: OutlinedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/st');
+                          },
+                          style: OutlinedButton.styleFrom(
+                            side: BorderSide(
+                              width: 5.0,
+                              color: Color.fromRGBO(13, 45, 132, 1),
+                            ),
+                          ),
+                          child: Image.asset(
+                            'images/character_new12.png',
+                          ),
+                        )
+                    )
+                ),
               ],
             ),
           ),
