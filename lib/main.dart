@@ -22,7 +22,7 @@ void main() {
       '/m': (context) => MenuScreen(),
       '/us': (context) => UnityScreen(),
       '/ui': (context) => UserInfoPage(),
-      '/st': (context) => StickerPage(),
+      '/st': (context) => AdvancedExample(),
     }
   ));
 }
