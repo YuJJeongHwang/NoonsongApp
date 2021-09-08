@@ -68,7 +68,7 @@ class _UnityScreenState extends State<UnityScreen> {
               color: Colors.white,
               padding: EdgeInsets.only(top:8, bottom: 8),
               child: SizedBox(
-                height: widgetHeight - 100,
+                height: widgetHeight - 200,
                 child: Container(
                   child: Stack(
                     children: <Widget>[
@@ -226,6 +226,7 @@ class _UnityScreenState extends State<UnityScreen> {
             //icon: Icons.panorama_fish_eye,
 
           ),
+
         ],
       )
     );
