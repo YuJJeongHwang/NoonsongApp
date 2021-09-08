@@ -61,15 +61,14 @@ class _UnityScreenState extends State<UnityScreen> {
       ),
       body: Column(
         children: <Widget>[
-          Screenshot(
-            controller : screenshotController,
-            key: globalKey,
-            child: Container(
+          Container(
               color: Colors.white,
               padding: EdgeInsets.only(top:8, bottom: 8),
               child: SizedBox(
-                height: widgetHeight - 200,
-                child: Container(
+                height: widgetHeight - 300,
+                child: Screenshot(
+                  controller : screenshotController,
+                  key: globalKey,
                   child: Stack(
                     children: <Widget>[
                       Container(
@@ -83,7 +82,6 @@ class _UnityScreenState extends State<UnityScreen> {
                   ),
                 ),
               ),
-            ),
           ),
           Container(
             padding: EdgeInsets.all(8),
