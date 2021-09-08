@@ -108,67 +108,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
               ),
-              /*Container(
-              padding: EdgeInsets.only(left: 20),
-              child: SizedBox(
-                height: 45,
-                child: ElevatedButton(
-                  onPressed: () {  },
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0.0,
-                    primary: Colors.black12,
-                    onPrimary: Colors.black,
-                  ),
-                  child: Text(
-                    '인증코드 보내기',
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 10, left: 20),
-              child: Text(
-                '이메일 인증코드',
-                style: TextStyle(
-                  fontSize: 17,
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                children: [
-                  Container(
-                    child: SizedBox(
-                      width: 250,
-                      height: 45,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: SizedBox(
-                      width: 120,
-                      height: 45,
-                      child: ElevatedButton(
-                        onPressed: () {  },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          primary: Colors.black12,
-                          onPrimary: Colors.black,
-                        ),
-                        child: Text(
-                          '인증코드 확인',
-                        ),
-                      ),
-                    )
-                  ),
-                ],
-              ),
-            ),*/
               Container(
                 padding: EdgeInsets.only(top: 10, left: 20),
                 child: Text(

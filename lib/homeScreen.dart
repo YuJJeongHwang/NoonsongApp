@@ -10,7 +10,9 @@ class NoonsongHomepage extends StatelessWidget {
       color: Colors.white,
       child: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            SizedBox(width: double.infinity),
             Container(
               padding: EdgeInsets.only(top: widgetHeight/4),
               child: Text(
